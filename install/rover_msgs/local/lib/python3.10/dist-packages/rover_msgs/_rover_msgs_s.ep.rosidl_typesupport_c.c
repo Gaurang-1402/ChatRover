@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/build/rover_msgs/rosidl_generator_py/rover_msgs/_rover_msgs_s.ep.rosidl_typesupport_c.c

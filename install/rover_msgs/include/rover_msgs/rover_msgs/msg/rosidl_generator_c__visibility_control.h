@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/build/rover_msgs/rosidl_generator_c/rover_msgs/msg/rosidl_generator_c__visibility_control.h

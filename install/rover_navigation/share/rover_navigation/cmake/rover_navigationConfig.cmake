@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/build/rover_navigation/ament_cmake_core/rover_navigationConfig.cmake

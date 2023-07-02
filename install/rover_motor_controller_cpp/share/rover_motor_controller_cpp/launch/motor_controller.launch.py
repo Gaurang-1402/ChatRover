@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/src/ros2_rover/rover_motor_controller_cpp/launch/motor_controller.launch.py

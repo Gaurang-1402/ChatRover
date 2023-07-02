@@ -340,3 +340,7 @@ doc/
 *.swp
 
 ## Setting files
+
+log/
+
+install/

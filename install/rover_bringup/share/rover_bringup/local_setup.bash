@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/build/rover_bringup/ament_cmake_environment_hooks/local_setup.bash

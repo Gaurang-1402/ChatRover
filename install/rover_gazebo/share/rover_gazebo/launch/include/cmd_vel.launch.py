@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/src/ros2_rover/rover_gazebo/launch/include/cmd_vel.launch.py

@@ -1,1 +1,0 @@
-/home/chief-of-mischief/Desktop/rover_ws/build/rover_msgs/rosidl_generator_c/rover_msgs/msg/detail/motors_command__functions.h
