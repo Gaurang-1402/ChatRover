@@ -19,10 +19,10 @@ from std_msgs.msg import Empty
 
 
 
-class MobileRobotController(Node):
+class RoverController(Node):
 
     def __init__(self):
-        super().__init__('mobile_robot_controller')
+        super().__init__('rover_controller')
         self.create_subscription(String,'/voice_cmd',self.voice_cmd_callback,10)
         self.velocity_publisher = self.create_publisher(Twist, '/cmd_vel', 10)
         # self.pose_subscriber = self.create_subscription(Pose, "/body_pose", self.pose_callback, 10)
@@ -36,7 +36,7 @@ class MobileRobotController(Node):
         self.move_executor = SingleThreadedExecutor()
         move_thread = threading.Thread(target=self.move_executor.spin)
         move_thread.start()
-        print('ROSGPT Robo Dog Controller Started. Waiting for input commands ...')
+        print('ROSGPT Robo Mobile Robot Controller Started. Waiting for input commands ...')
     
     def pose_callback(self, msg):
         self.x = msg.position.x
@@ -46,7 +46,7 @@ class MobileRobotController(Node):
         self.pose = msg
 
     def stop(self):
-        print('Stopping the mobile_robot ...')
+        print('Stopping the rover ...')
         twist_msg = Twist()
         twist_msg.linear.x = 0.0
         twist_msg.linear.y = 0.0
@@ -103,7 +103,7 @@ class MobileRobotController(Node):
         )
 
     def move(self, linear_speed, distance, direction): 
-        print(f'Start moving the mobile_robot {direction} at {linear_speed} m/s for a distance of {distance} meters')
+        print(f'Start moving the rover {direction} at {linear_speed} m/s for a distance of {distance} meters')
 
         if abs(linear_speed) > 1.0:
             print('[ERROR]: The speed in any direction must be lower than 1.0!')
@@ -133,7 +133,7 @@ class MobileRobotController(Node):
             # Set the start time
             start_time = time.time()
 
-            while time.time() - start_time < 5:  # Loop for 5 seconds
+            while time.time() - start_time < 5:  # Lo$ ros2 launch rover_gazebo forest.launch.pyop for 5 seconds
                 self.velocity_publisher.publish(twist_msg)
                 self.move_executor.spin_once(timeout_sec=0.5)
 
@@ -150,11 +150,11 @@ class MobileRobotController(Node):
         twist_msg.angular.z = 0
         self.velocity_publisher.publish(twist_msg)
 
-        print("Stopping the mobile_robot ...")
+        print("Stopping the rover ...")
 
 
     def rotate(self, angular_speed, distance, direction): 
-        print(f'Start moving the mobile_robot {direction} at {angular_speed} m/s for a distance of {distance} meters')
+        print(f'Start rotating the rover {direction} at {angular_speed} m/s for a distance of {distance} meters')
 
         if abs(angular_speed) > 1.0:
             print('[ERROR]: The speed in any direction must be lower than 1.0!')
@@ -203,7 +203,7 @@ class MobileRobotController(Node):
 
                 
 
-            linear_vector.x = 0.0
+            linear_vector.z = 0.0
             linear_vector.y = 0.0
 
 
@@ -219,8 +219,8 @@ class MobileRobotController(Node):
             start_pose = copy.copy(self.pose)
             # Set the start time
             start_time = time.time()
-            print('start_pose: ', start_pose)
-            print('current_pose: ', self.pose)
+            # print('start_pose: ', start_pose)
+            # print('current_pose: ', self.pose)
             while time.time() - start_time < 5:  # Loop for 5 seconds
                 self.velocity_publisher.publish(twist_msg)
                 self.move_executor.spin_once(timeout_sec=0.5)
@@ -238,12 +238,12 @@ class MobileRobotController(Node):
         twist_msg.angular.z = 0
         self.velocity_publisher.publish(twist_msg)
 
-        print("Stopping the mobile_robot ...")
+        print("Stopping the rover ...")
 
     
 def main(args=None):
     rclpy.init(args=args)
-    node = MobileRobotController()
+    node = RoverController()
     rclpy.spin(node)
     rclpy.shutdown()
 

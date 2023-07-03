@@ -199,7 +199,6 @@ class ROSGPTProxy(Resource):
 
 
         prompt = prompt+'\nprompt: '+text_command
-        #print(prompt) #for testing
         
 
         # Create the message structure for the GPT-3 model
@@ -247,18 +246,17 @@ class ROSGPTProxy(Resource):
         print ('[ROSGPT] Command received. ', text_command, '. Asking ChatGPT ...')
         # Run the speak function on a separate thread
         #print('text_command:', text_command,'\n')
-        threading.Thread(target=speak, args=(text_command+"Message received. Now consulting ChatGPT for a response.",)).start()
+        # threading.Thread(target=speak, args=(text_command+"Message received. Now consulting ChatGPT for a response.",)).start()
         chatgpt_response = self.askGPT(text_command)
         print ('[ROSGPT] Response received from ChatGPT. \n', str(json.loads(chatgpt_response))[:60], '...')
         #print('eval(chatgpt_response)', eval(chatgpt_response))
         # Run the speak function on a separate thread
-        threading.Thread(target=speak, args=("We have received a response from ChatGPT.",)).start()
+        # threading.Thread(target=speak, args=("We have received a response from ChatGPT.",)).start()
 
         if chatgpt_response is None:
             return {'error': 'An error occurred while processing the request'}
 
         threading.Thread(target=process_and_publish_chatgpt_response, args=(self.chatgpt_ros2_node, text_command, chatgpt_response, True)).start()
-        #print(json.loads(chatgpt_response))
         return json.loads(chatgpt_response)
 
 
