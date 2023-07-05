@@ -9,6 +9,10 @@ Key features include:
 - Support for commands in multiple languages
 
 
+
+
+![rover-3](https://github.com/Gaurang-1402/ChatRover/assets/71042887/c26f704c-cc08-4194-9878-758491740a16)
+
 ## ROSGPT Architecture
 
 ![Screenshot from 2023-07-04 20-49-50](https://github.com/Gaurang-1402/ChatDrones/assets/71042887/f3534fd5-1ac8-4d55-8e67-fb5f6c0ddf8d)
