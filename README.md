@@ -74,7 +74,7 @@ ros2 run rosgpt rosgpt_client_node
 
 ```
 source install/setup.sh
-ros2 run rosgpt rosgptparser_drone 
+ros2 run rosgpt rosgptparser_rover
 ```
 
 ## Running the simulation
