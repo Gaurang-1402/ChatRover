@@ -5,15 +5,16 @@ ChatRover showcases the power of Language Logic Models (LLMs) by allowing users 
 Key features include:
 
 - A user-friendly web application that provides an interactive interface for rover control
+[![output-onlinegiftools.gif](https://i.postimg.cc/6qHmw0Sd/output-onlinegiftools.gif)](https://postimg.cc/0Kwf0p9Q)
+  
 - Full control over the rover's directional movement, including forward, backward, left, and right commands
+[![output-onlinegiftools-2.gif](https://i.postimg.cc/bNrznFzf/output-onlinegiftools-2.gif)](https://postimg.cc/LndKKDYx)
+  
 - Support for commands in multiple languages
 
-
-[![output-onlinegiftools.gif](https://i.postimg.cc/6qHmw0Sd/output-onlinegiftools.gif)](https://postimg.cc/0Kwf0p9Q)
-
-[![output-onlinegiftools-2.gif](https://i.postimg.cc/bNrznFzf/output-onlinegiftools-2.gif)](https://postimg.cc/LndKKDYx)
-
 ![rover-3](https://github.com/Gaurang-1402/ChatRover/assets/71042887/c26f704c-cc08-4194-9878-758491740a16)
+
+
 
 ## ROSGPT Architecture
 
