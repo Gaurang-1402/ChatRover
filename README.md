@@ -4,7 +4,7 @@ ChatRover showcases the power of Language Logic Models (LLMs) by allowing users 
 
 Key features include:
 
-- A user-friendly web application that provides an interactive interface for drone control
+- A user-friendly web application that provides an interactive interface for rover control
 - Full control over the rover's directional movement, including forward, backward, left, and right commands
 - Support for commands in multiple languages
 
