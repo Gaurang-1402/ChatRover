@@ -1,8 +1,11 @@
 # ChatRover: Control Mars Rover with Natural Language
 
-ChatRover showcases the power of Language Logic Models (LLMs) by allowing users to control rovers using simple, natural language instructions. The system currently operates within a simulated environment for testing and development purposes.
+ChatRover is a pioneering project that combines Language Logic Models (LLMs) with the control of rovers. This allows users to **steer rovers using common, everyday language commands.** The project runs on the ROS2 (Robot Operating System) Humble and utilizes the Gazebo environment for realistic simulations of rover behavior.
 
-Key features include:
+ChatRover is accompanied by a user-friendly web application. This provides an intuitive interface for users to deliver commands, bridging the gap between cutting-edge technology and user accessibility.
+
+While ChatRover currently operates within a simulated environment for thorough testing and development, it is designed to translate natural language instructions into real-world commands for rovers when required.
+
 
 - A user-friendly web application that provides an interactive interface for rover control
 [![output-onlinegiftools.gif](https://i.postimg.cc/6qHmw0Sd/output-onlinegiftools.gif)](https://postimg.cc/0Kwf0p9Q)
