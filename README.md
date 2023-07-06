@@ -6,6 +6,7 @@ ChatRover is accompanied by a user-friendly web application. This provides an in
 
 While ChatRover currently operates within a simulated environment for thorough testing and development, it is designed to translate natural language instructions into real-world commands for rovers when required.
 
+Key features include:
 
 - A user-friendly web application that provides an interactive interface for rover control
 [![output-onlinegiftools.gif](https://i.postimg.cc/6qHmw0Sd/output-onlinegiftools.gif)](https://postimg.cc/0Kwf0p9Q)
